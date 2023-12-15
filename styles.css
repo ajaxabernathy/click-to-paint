@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+body {
+  background-color: white;
+}
+
+.easel {
+  height: 100vh;
+}
+
+.text {
+  font-family: 'Silkscreen', sans-serif;
+  color: #b3b3b3;
+  text-align: center;
+  padding-top: 10px;
+}
