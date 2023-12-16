@@ -1,38 +1,9 @@
-// declare canvas and set context, height and width
-const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
-console.log(canvas);
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+document.addEventListener('DOMContentLoaded', function () {
+  const drawingArea = document.getElementById('drawingArea');
+  const text = document.getElementById('text');
+  drawingArea.appendChild(text);
+  let isDrawing = false;
 
-// initialize variables to track mouse clicks and releases
-let mouseClicked = false;
-let mouseReleased = true;
-
-// event listeners to track mouse click and movement
-document.addEventListener('mousedown', onMouseDown, false);
-document.addEventListener('mouseup', onMouseUp, false);
-document.addEventListener('mousemove', onMouseMove, false);
-
-function onMouseDown(e) {
-  mouseClicked = true;
-}
-
-function onMouseUp(e) {
-  mouseClicked = false;
-}
-
-function onMouseMove(e) {
-  if (mouseClicked) {
-    const x = e.clientX;
-    const y = e.clientY;
-
-    // Draw emoji at the current mouse position
-    drawEmoji(x, y);
-  }
-}
-
-function drawEmoji(x, y) {
   const emojis = [
     '😸',
     '🎀',
@@ -590,8 +561,61 @@ function drawEmoji(x, y) {
     '🎢',
     '🍓',
   ];
-  const randomIndex = Math.floor(Math.random() * emojis.length);
-  const randomEmoji = emojis[randomIndex];
-  context.font = '24px Arial'; // Set font size and style
-  context.fillText(randomEmoji, x, y);
-}
+
+  // Event listeners for mouse down, up, and move events
+  drawingArea.addEventListener('mousedown', startDrawing);
+  drawingArea.addEventListener('mouseup', stopDrawing);
+  drawingArea.addEventListener('mousemove', drawEmoji);
+  drawingArea.addEventListener('click', drawSingleEmoji);
+
+  function startDrawing() {
+    isDrawing = true;
+  }
+
+  function stopDrawing() {
+    isDrawing = false;
+  }
+
+  function drawEmoji(e) {
+    if (!isDrawing) return;
+
+    text.classList.add('hidden');
+    const emoji = getRandomEmoji();
+
+    // Create an emoji element
+    const emojiElement = document.createElement('div');
+    emojiElement.textContent = emoji;
+    emojiElement.style.position = 'absolute';
+
+    const emojiSize = 24;
+    emojiElement.style.left = e.clientX - emojiSize / 2 + 'px';
+    emojiElement.style.top = e.clientY - emojiSize / 2 + 'px';
+    emojiElement.style.fontSize = '24px';
+
+    // Append the emoji element to the drawing area
+    drawingArea.appendChild(emojiElement);
+  }
+
+  function drawSingleEmoji(e) {
+    text.classList.add('hidden');
+    const emoji = getRandomEmoji();
+
+    // Create an emoji element
+    const emojiElement = document.createElement('div');
+    emojiElement.textContent = emoji;
+    emojiElement.style.position = 'absolute';
+
+    const emojiSize = 24;
+    emojiElement.style.left = e.clientX - emojiSize / 2 + 'px';
+    emojiElement.style.top = e.clientY - emojiSize / 2 + 'px';
+    emojiElement.style.fontSize = '24px';
+
+    // Append the emoji element to the drawing area
+    drawingArea.appendChild(emojiElement);
+  }
+
+  function getRandomEmoji() {
+    const randomIndex = Math.floor(Math.random() * emojis.length);
+    return emojis[randomIndex];
+  }
+});
