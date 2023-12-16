@@ -615,7 +615,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const emojiSize = 24;
     emojiElement.style.left = e.touches[0].clientX - emojiSize / 2 + 'px';
     emojiElement.style.top = e.touches[0].clientY - emojiSize / 2 + 'px';
-    emojiElement.style.fontSize = '24px';
+    emojiElement.style.fontSize = '18px';
 
     // Append the emoji element to the drawing area
     drawingArea.appendChild(emojiElement);
