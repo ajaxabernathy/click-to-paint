@@ -30,3 +30,16 @@ html {
   opacity: 0;
   transition: visibility 0s 2s, opacity 0.25s linear;
 }
+
+.buttons {
+  font-family: 'Silkscreen', sans-serif;
+  color: #b3b3b3;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: 0.25s;
+}
+
+.buttons:hover {
+  color: black;
+}

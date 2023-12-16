@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const button = document.getElementById('reset');
   const drawingArea = document.getElementById('drawingArea');
   const text = document.getElementById('text');
+  drawingArea.appendChild(button);
   drawingArea.appendChild(text);
   let isDrawing = false;
 
