@@ -1,10 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const button = document.getElementById('reset');
+  const nav = document.getElementById('nav');
   const drawingArea = document.getElementById('drawingArea');
   const text = document.getElementById('text');
-  drawingArea.appendChild(button);
+  document.body.appendChild(nav);
   drawingArea.appendChild(text);
   let isDrawing = false;
+
+  // Handle click info to display info modal
+  const info = document.getElementById('info');
+  const dialog = document.querySelector('dialog');
+  const closeButton = document.querySelector('dialog button');
+
+  info.addEventListener('click', () => {
+    dialog.showModal();
+  });
+
+  closeButton.addEventListener('click', () => {
+    dialog.close();
+  });
 
   const emojis = [
     '😸',
@@ -623,6 +636,7 @@ document.addEventListener('DOMContentLoaded', function () {
     drawingArea.appendChild(emojiElement);
   }
 
+  // Draw one emoji on single click
   function drawSingleEmoji(e) {
     text.classList.add('hidden');
     const emoji = getRandomEmoji();
