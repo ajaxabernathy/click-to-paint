@@ -9,8 +9,8 @@ html {
 
 #drawingArea {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30;
+  left: 30;
   width: 100%;
   height: 100%;
   background-color: #f0f0f0;
@@ -25,21 +25,76 @@ html {
   color: #b3b3b3;
 }
 
+.nav {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  padding: 10px;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.info {
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+  color: #b3b3b3;
+  border: none;
+  transition: 0.25s;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(1px);
+}
+
+.modal {
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+  color: black;
+  width: 375px;
+  border: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+  color: black;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: 2px;
+  margin-top: 4px;
+  background: none;
+  border: none;
+}
+
+.restart {
+  font-family: 'Silkscreen', sans-serif;
+  color: #b3b3b3;
+  margin-left: auto;
+  padding: 10px;
+  transition: 0.25s;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 2s, opacity 0.25s linear;
 }
 
-.buttons {
-  font-family: 'Silkscreen', sans-serif;
-  color: #b3b3b3;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  transition: 0.25s;
+.restart:hover {
+  color: black;
 }
 
-.buttons:hover {
+.info:hover {
   color: black;
 }

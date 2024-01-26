@@ -5,11 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Draw</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+          rel='stylesheet'
+          href='https://use.typekit.net/ghz3inn.css'
+        ></link>
   </head>
   <body>
-    <a id="reset" class="buttons" href="/index.html">RESTART</a>
+    <div class="nav" id="nav">
+      <h1 class="name">AJAX ABERNATHY</h1>
+
+      <dialog class="modal">
+        <button class="modal-close">X</button>
+        <p>
+          I'm Ajax - a fullstack web developer with a frontend focus, based in Philadelphia.
+        </p>
+        <p>
+          Most of my experience is in TypeScript, React, Next.js, Node and Express, relational and non-relational databases. I also love HTML, CSS, JS and web fundamentals.
+        </p>
+        <a class='contact' href="mailto:ajax.abernathy@gmail.com" target="_blank" rel="noopener noreferrer">Contact</a>
+      </dialog>
+      <button id="info" class="info">INFO</button>
+
+      <a id="reset" class="restart" href="/index.html">RESTART</a>
+    </div>
+
     <div id="text">CLICK/DRAG TO DRAW</div>
     <div id="drawingArea"></div>
+
     <script src="main.js"></script>
   </body>
 </html>
