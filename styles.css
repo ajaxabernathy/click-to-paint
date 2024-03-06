@@ -35,53 +35,10 @@ html {
   align-items: center;
 }
 
-.name {
-  padding: 10px;
-  font-family: 'Silkscreen', sans-serif;
-  font-size: 16px;
-  color: black;
-}
-
-.info {
-  font-family: 'Silkscreen', sans-serif;
-  font-size: 16px;
-  margin-left: 10px;
-  color: #b3b3b3;
-  border: none;
-  background: none;
-  transition: 0.25s;
-}
-
-dialog::backdrop {
-  backdrop-filter: blur(1px);
-}
-
-.modal {
-  font-family: 'neue-haas-grotesk-display', sans-serif;
-  color: black;
-  width: 375px;
-  border: none;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.contact {
-  color: black;
-}
-
-.modal-close {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin-right: 2px;
-  margin-top: 4px;
-  background: none;
-  border: none;
-}
-
 .restart {
   font-family: 'Silkscreen', sans-serif;
   color: #b3b3b3;
-  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
   transition: 0.25s;
 }
