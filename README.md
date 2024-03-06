@@ -1,5 +1,5 @@
 # drag-to-draw
 
-Try it out here: https://click-to-paint.vercel.app/
+Try it out here: https://drag-to-draw.vercel.app/
 
 Have fun
