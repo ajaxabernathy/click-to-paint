@@ -6,18 +6,19 @@ document.addEventListener('DOMContentLoaded', function () {
   drawingArea.appendChild(text);
   let isDrawing = false;
 
+  //TEMPORARILY REMOVING INFO MODAL
   // Handle click info to display info modal
-  const info = document.getElementById('info');
-  const dialog = document.querySelector('dialog');
-  const closeButton = document.querySelector('dialog button');
+  // const info = document.getElementById('info');
+  // const dialog = document.querySelector('dialog');
+  // const closeButton = document.querySelector('dialog button');
 
-  info.addEventListener('click', () => {
-    dialog.showModal();
-  });
+  // info.addEventListener('click', () => {
+  //   dialog.showModal();
+  // });
 
-  closeButton.addEventListener('click', () => {
-    dialog.close();
-  });
+  // closeButton.addEventListener('click', () => {
+  //   dialog.close();
+  // });
 
   const emojis = [
     '😸',
